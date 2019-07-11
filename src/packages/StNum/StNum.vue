@@ -3,7 +3,7 @@
       <span @click="reduce">-</span>
       <input
         :class="disabled?'disabled':''"
-        type="text"
+        type="number"
         @blur="setdefault"
         :disabled="disabled"
         v-model="this_num">
@@ -90,6 +90,8 @@
         background: #fff;
       }
     }
+    input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    input[type="number"]{ -moz-appearance: textfield; }
     span{
       width: 20px;
       height: 20px;
